@@ -1,0 +1,40 @@
+
+#ifdef _FE7_
+
+	#ifndef STAIRS_ASM
+	
+		#define STAIRS_ASM
+		
+		#define Stairs(StairID,X1,Y1,X2,Y2) "LOCA StairID [X1,Y1] 0x22 ; LOCA StairID [X2,Y2] 0x22"
+		
+		ALIGN 4
+		#inctext lyn "Stairs.elf" "Hooks.elf"
+		ALIGN 4
+		StairErrorTextLocation:
+		SHORT StairsBlockedText
+		
+		PUSH
+		ORG $2F250
+		POIN RepointThatAction
+		ORG $2F284
+		POIN RepointThatAction
+		ORG $2F28C
+		POIN RepointThatAction
+		ORG $2F2A0
+		POIN RepointThatAction
+		ORG $2F320 // GOOD FOR FE7
+		SHORT 0xE7F8 // b #0x0802F314
+		ORG $2F314
+		jumpToHack(UnsetMoveDebuff)
+		
+		ORG $21580 // GOOD FOR FE7
+		jumpToHack(EndTurnFix)
+		POP
+		
+	#endif // STAIRS_ASM
+
+#else
+
+	ERROR "This version of StairsASM is for FE7! There is an FE8 version on FEU."
+
+#endif // _FE7_

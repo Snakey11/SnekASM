@@ -1,0 +1,10 @@
+
+#include eastdlib.event
+
+ALIGN 4
+
+#include "AntiWeaponTriangle.lyn.event"
+
+ALIGN 4
+AntiWeaponTriangleList:
+BYTE /* Put item IDs of weapons to be ignored by WTA here */ 0x00

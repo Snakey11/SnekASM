@@ -1,0 +1,49 @@
+
+	#ifdef _FE8_
+		
+		#ifndef STAIRS_ASM
+		
+			#define STAIRS_ASM
+			
+			#define Stairs(StairID,X1,Y1,X2,Y2) "LOCA StairID [X1,Y1] 0x22 ; LOCA StairID [X2,Y2] 0x22"
+			
+			ALIGN 4
+			#inctext lyn "Stairs.elf" "Hooks.elf"
+			ALIGN 4
+			StairErrorTextLocation:
+			SHORT StairsBlockedText
+			ALIGN 4
+			CharacterStructStairByte:
+			BYTE 0x3A // Don't touch unless you know what you're doing!
+			ALIGN 4
+			StairCameraEvent:
+			STAL 0x10
+			CAM1 0xFFFF
+			STAL 0x10
+			NoFade
+			ENDA
+			
+			PROTECT 0x1CB70 0x1CB80
+			
+			PUSH
+			/*ORG $32154
+			jumpToHack(UnsetMoveDebuff)
+			ORG $3215E
+			SHORT 0xE7F9 // b #0x08032152. At the end of the switch, part of the jump to UnsetMoveDebuff.
+			ORG $320B0
+			POIN ActionPickRepoint*/
+			
+			ORG $225F8
+			jumpToHack(EndTurnFix)
+			POP
+			
+			
+			#include "UnitMenu.event"
+		
+		#endif // STAIRS_ASM
+	
+	#else
+	
+		ERROR "This version of Stairs is for FE8!"
+	
+	#endif // _FE8_

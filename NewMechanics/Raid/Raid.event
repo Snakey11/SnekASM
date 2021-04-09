@@ -1,0 +1,22 @@
+
+#ifdef _FE8_
+
+	#ifndef RAID
+	
+		#define RAID
+		#define Raid(EventID,Pointer,X,Y) "LOCA EventID Pointer [X,Y] 0x21"
+		#define TileChange(X,Y) "SETVAL 0xB Coords(X,Y) ; TILECHANGE 0xFFFF"
+		#define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
+		
+		ALIGN 4
+		#inctext lyn "RaidCommand.elf"
+		
+		#include "UnitMenu.event"
+	
+	#endif // RAID
+
+#else
+
+	ERROR "Raid is for FE8 only!"
+	
+#endif // _FE8_

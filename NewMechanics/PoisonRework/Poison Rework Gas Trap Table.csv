@@ -1,0 +1,80 @@
+INLINE PoisonReworkGasTrapTable,Poison Applied
+00 Prologue,4
+01 Ch 1,4
+02 Ch 2,4
+03 Ch 3,4
+04 Ch 4/Zaha Woods,4
+05 Ch 5x,4
+06 Ch 5,4
+07 Ch 6/Adlas Plains,4
+08 Ch 7,4
+09 Ch 8,4
+0A Ch 9 Eirika,4
+0B Ch 10 Eirika/Teras Plateau,4
+0C Ch 12 Eirika,4
+0D Ch 13 Eirika,4
+0E Ch 14 Eirika,4
+0F Ch 15 Eirika,4
+10 Ch 16 Eirika,4
+11 Ch 17 Eirika/Narube River,4
+12 Ch 18 Eirika/Neleras Peak,4
+13 Ch 19 Eirika,4
+14 Ch 20 Eirika,4
+15 Final Ch 1 Eirika,4
+16 Final Ch 2 Erika,4
+17 Ch 9 Ephraim,4
+18 Ch 10 Ephraim/Bethroen,4
+19 Ch 12 Ephraim,4
+1A Ch 13 Ephraim/Za'abadul Marsh,4
+1B Ch 14 Ephraim,4
+1C Ch 15 Ephraim,4
+1D Ch 16 Ephraim,4
+1E Ch 17 Ephraim/Narube River,4
+1F Ch 18 Ephraim/Neleras Peak,4
+20 Ch 19 Ephraim,4
+21 Ch 20 Ephraim,4
+22 Final Ch 1 Ephraim,4
+23 Final Ch 2 Ephraim,4
+24 Tower of Valni 1,4
+25 Tower of Valni 2,4
+26 Tower of Valni 3,4
+27 Tower of Valni 4,4
+28 Tower of Valni 5,4
+29 Tower of Valni 6,4
+2A Tower of Valni 7,4
+2B Tower of Valni 8,4
+2C Tower of Valni 8 (Cutscene),4
+2D Tower of Valni 8 (Cutscene 2),4
+2E Lagdou Ruins 1,4
+2F Lagdou Ruins 2,4
+30 Lagdou Ruins 3,4
+31 Lagdou Ruins 4,4
+32 Lagdou Ruins 5,4
+33 Lagdou Ruins 6,4
+34 Lagdou Ruins 7,4
+35 Lagdou Ruins 8,4
+36 Lagdou Ruins 9,4
+37 Lagdou Ruins 10,4
+38 Lords split up (glitchy map),4
+39 Melkaen Coast,4
+3A Link Arena,4
+3B The interesting map...,4
+3C Debug map,4
+3D Ch 11 Eirika,4
+3E Ch 11 Ephraim,4
+3F Grado castle,4
+40 Renais castle,4
+41 Caer Pelyn,4
+42 Renais throne,4
+43 Renais audience,4
+44 Renval gate,4
+45 Grado borders,4
+46 Grado prison,4
+47 Grado shrine (Past),4
+48 Renais shrine,4
+49 Some path,4
+4A Some building,4
+4B Another shrine,4
+4C Another path,4
+4D Grado shrine (Present),4
+4E Ch 5 town (Past),4

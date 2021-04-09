@@ -1,0 +1,30 @@
+
+#ifdef _FE8_
+
+	#ifndef ANIMA_TRIANGLE
+		
+		#define ANIMA_TRIANGLE
+		ALIGN 4
+		#inctext lyn "AnimaTriangle.elf" "Definitions.elf"
+		
+		ALIGN 4 // Be sure to terminate each list with an 0x00!
+		FireList:
+		BYTE Fire Elfire /* Other tomes to be considered fire */ 0x00
+
+		ALIGN 4
+		ThunderList:
+		BYTE Thunder Bolting /* Other tomes to be considered thunder */ 0x00
+
+		ALIGN 4
+		WindList:
+		BYTE Fimbulvetr WindSword /* Other tomes to be considered wind */ 0x00
+		
+		PROTECT 0x2C834 0x2C844
+		
+	#endif ANIMA_TRIANGLE
+
+#else
+
+	ERROR "This version of Anima Triangle is for FE8!"
+
+#endif // _FE8_
