@@ -15,7 +15,7 @@
 	GenderedTextEntry(0x3280,GenderEventID,HerString,HimString)
 	GenderedTextEntry(0x3380,GenderEventID,herString,himString)
 	GenderedTextEntry(0x3480,GenderEventID,HersString,HisString)
-	GenderedTextEntry(0x3580,GenderEventID,HisString,hisString)
+	GenderedTextEntry(0x3580,GenderEventID,hersString,hisString)
 	GenderedTextEntry(0,0,0,0)
 	
 	HeString:
