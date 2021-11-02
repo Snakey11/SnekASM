@@ -3,7 +3,7 @@
 
 SET_DATA AtMenu, (0x08A1829C)
 
-SET_DATA TextHandleStruct, (0x02013590)
+SET_DATA TextHandleStruct, (0x02013588)
 
 SET_DATA SomeBgMap, (0x02023136)
 

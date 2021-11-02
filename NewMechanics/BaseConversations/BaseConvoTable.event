@@ -4,7 +4,10 @@
 
 	#define BaseConvoSize 32 // This NEEDS to be divisible by 4.
 	// I'd really prefer to be able to access sizeof(BaseConvoEntry), but idk if that's possible yet.
-
+	
+	gBaseConvosEnforceAlive:
+	BYTE True
+	
 	ALIGN 4
 	BaseConvoTable: // Allocate 0xFF * 8 entries. 0xFF chapters, 8 entries per chapter.
 	FILL 0xFF*8*BaseConvoSize

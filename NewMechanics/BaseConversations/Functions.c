@@ -4,6 +4,19 @@ static int IsConvoViewable(BaseConvoEntry* entry)
 {
 	if ( !entry->exists ) { return 0;}
 	if ( CheckEventId(entry->eventID) ) { return 0; }
+	if ( gBaseConvosEnforceAlive )
+	{
+		if ( entry->character1 )
+		{
+			Unit* unit = GetUnit(entry->character1);
+			if ( !unit || (unit->state & US_DEAD) ) { return 0; }
+		}
+		if ( entry->character2 )
+		{
+			Unit* unit = GetUnit(entry->character2);
+			if ( !unit || (unit->state & US_DEAD) ) { return 0; }
+		}
+	}
 	if ( !entry->usability ) { return 1; }
 	else { return entry->usability(entry); }
 }

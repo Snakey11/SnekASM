@@ -1,6 +1,6 @@
 
 #include <stddef.h>
-#include "../FE-CLib-master/include/gbafe.h"
+#include "FE-CLib-master/include/gbafe.h"
 
 typedef struct BaseConvoEntry BaseConvoEntry;
 typedef struct BaseConvoProc BaseConvoProc;
@@ -46,10 +46,11 @@ extern const MenuCommandDefinition BaseConvoMenuCommands;
 extern BaseConvoEntry BaseConvoTable[0xFF][8];
 extern const void CallBaseConvoEvents;
 extern void BaseSupportExternalConvoSetup(BaseConvoEntry* entry);
+extern const u8 gBaseConvosEnforceAlive; // Used as an option flag to see whether base convos should only work for units that are alive (and exist).
 
 extern const ProcInstruction SALLYCURSOR; // 0x0859DBBC.
 extern u32 gMemorySlot[16]; // 0x030004B8.
-extern struct TextHandle TextHandleStruct; // 0x02013590.
+extern struct TextHandle TextHandleStruct; // 0x02013588.
 extern u16 SomeBgMap; // ptr = 0x02023136.
 extern void EndBG3Slider(void); // 0x08086DBC.
 extern char WriteTextTo; // 0x0203EFC0.
@@ -125,12 +126,12 @@ void SetScrollingBackground(BaseConvoProc* proc)
 
 void DisplayBottomText(BaseConvoProc* proc)
 {
-	Text_InitClear((TextHandle*)((char*)&TextHandleStruct-8),0x10);
-	Text_InitClear(&TextHandleStruct,0x09);
-	Text_Clear((TextHandle*)((char*)&TextHandleStruct-8));
+	Text_InitClear(&TextHandleStruct,0x10);
+	Text_InitClear(&TextHandleStruct+1,0x09);
+	Text_Clear(&TextHandleStruct);
 	char* String = GetStringFromIndex(gBaseConvoSelectConvoText);
-	Text_InsertString((TextHandle*)((char*)&TextHandleStruct-8),Text_GetStringTextCenteredPos(0x80,String),0,String);
-	Text_Display((TextHandle*)((char*)&TextHandleStruct-8),&SomeBgMap);
+	Text_InsertString(&TextHandleStruct,Text_GetStringTextCenteredPos(0x80,String),0,String);
+	Text_Display(&TextHandleStruct,&SomeBgMap);
 }
 
 // Construct the geometry for the menu.
