@@ -5,7 +5,7 @@
     .set    \name, \value
 .endm
 
-SET_FUNC SummonLevel, (0x0802B980+1)
+@SET_FUNC SummonLevel, (0x0802B980+1)
 
 SET_FUNC FixSettingGrowths, (0x0802C220+1)
 
